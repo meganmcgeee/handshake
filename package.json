@@ -1,0 +1,42 @@
+{
+  "name": "handshake",
+  "version": "1.0.0",
+  "description": "",
+  "main": "matchScore.js",
+  "scripts": {
+    "dev": "./dev.sh",
+    "watch": "./watch.sh",
+    "start": "node lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/makeappsio/handshake.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makeappsio/handshake/issues"
+  },
+  "homepage": "https://github.com/makeappsio/handshake#readme",
+  "dependencies": {
+    "botbuilder": "^3.2.3",
+    "lodash": "^4.16.4",
+    "pg": "^6.1.0",
+    "pg-hstore": "^2.3.2",
+    "restify": "^4.1.1",
+    "sequelize": "^3.24.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-eslint": "^7.0.0",
+    "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb-base": "^8.0.0",
+    "eslint-plugin-better": "^0.1.5",
+    "eslint-plugin-fp": "^2.2.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-lodash-fp": "^2.0.1"
+  }
+}
