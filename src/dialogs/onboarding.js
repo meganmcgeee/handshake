@@ -27,7 +27,7 @@ export default [
     builder.Prompts.text(
       session,
       joinLines(
-        `${results.response.entity}? Sick. And what are you interested in talking about today?`,
+        `${results.response.entity}? Amazing. And what are you interested in talking about today?`,
         '(Make it easy for me: give me a comma-separated list of interests, please!)'
       )
     );

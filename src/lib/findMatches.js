@@ -21,6 +21,7 @@ function notifyMatches(...users) {
       matchAddress: otherUser.address,
       matchId: otherUser._id,
       myId: u._id,
+      myName: u.name,
     });
   });
 }
