@@ -1,5 +1,5 @@
-import Sequelize from 'sequelize';
 import builder from 'botbuilder';
+import mongoose from 'mongoose';
 import restify from 'restify';
 
 //= ========================================================
@@ -20,8 +20,23 @@ const connector = new builder.ChatConnector({
 const bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
 
-const sequelize = new Sequelize(process.env.DATABASE_URL)
-  .then(console.log);
+// Initialize database
+mongoose.connect(process.env.MONGODB_URI);
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
+  console.log('database didnt blow up yay');
+  // Mongoose Schema
+  const userSchema = mongoose.Schema({
+    firstName: String,
+    interests: Array,
+    eventID: mongoose.Schema.Types.ObjectId,
+  });
+
+  // Mongoose model
+  const user = mongoose.model('User', userSchema);
+});
+
 
 //= ========================================================
 // Bots Dialogs
