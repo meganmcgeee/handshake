@@ -13,6 +13,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'arrow-parens': [2, 'as-needed'],
     'better/no-deletes': 2,
     'better/no-fors': 2,
     'better/no-instanceofs': 2,
@@ -29,6 +30,7 @@ module.exports = {
     }],
     'import/no-extraneous-dependencies': 0,
     'max-len': 0,
+    'no-confusing-arrow': 0,
     'no-console': 0,
     'no-underscore-dangle': [2, {
       allow: ['_id'],

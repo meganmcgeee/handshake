@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 ./watch.sh &
-./node_modules/.bin/nodemon lib/index.js
+eval $(cat .env) ./node_modules/.bin/nodemon lib/index.js

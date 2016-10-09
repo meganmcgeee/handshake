@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/makeappsio/handshake#readme",
   "dependencies": {
+    "arrford": "^2.0.1",
+    "bluebird": "^3.4.6",
     "botbuilder": "^3.2.3",
     "lodash": "^4.16.4",
     "mongoose": "^4.6.3",
@@ -30,6 +32,7 @@
     "babel-cli": "^6.16.0",
     "babel-eslint": "^7.0.0",
     "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-2": "^6.17.0",
     "eslint": "^3.7.1",
     "eslint-config-airbnb-base": "^8.0.0",
     "eslint-plugin-better": "^0.1.5",
