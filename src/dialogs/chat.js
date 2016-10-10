@@ -2,9 +2,6 @@ import { bot } from '../lib/initialize';
 import builder from 'botbuilder';
 
 export default [
-  session => {
-    builder.Prompts.text(session, 'Say something!');
-  },
   (session, { response }) => {
     const { matchAddress: otherUser } =
       session.privateConversationData;
@@ -18,7 +15,10 @@ export default [
         .address(otherUser)
         .text(`Your match said: ${response}`);
       bot.send(msg);
-      session.beginDialog('/chat');
+      builder.Prompts.confirm(session, '');
     }
+  },
+  (session, { response }) => {
+    session.beginDialog('/chat', { response });
   },
 ];
